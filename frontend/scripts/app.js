@@ -125,7 +125,7 @@ document.getElementById("print-pdf").addEventListener("click", () => {
     html: tabela,
     startY: 20, // Define a posição inicial da tabela no PDF
     styles: {
-      fontSize: 10, // Reduz o tamanho da fonte para caber no PDF
+      fontSize: 8, // Reduz o tamanho da fonte para caber no PDF
       cellPadding: 2,
     },
     headStyles: {

@@ -101,13 +101,24 @@ button:hover {
 }
 
 table {
-  width: 100%;
+  width: 70%;
   border-collapse: collapse;
   margin-top: 20px;
   font-size: 12px;
   background-color: #222;
   color: #fff;
   border: 1px solid #555;
+}
+
+.table-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#text-h2 {
+  text-align: center;
 }
 
 th,
