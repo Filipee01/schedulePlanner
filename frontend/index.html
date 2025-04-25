@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Planejador de Horários</title>
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <h1>Planejador de Horários</h1>
+    <form id="schedule-form">
+      <label for="nivel">Selecione o Nível:</label>
+      <select id="nivel" name="nivel">
+        <option value="0">Nível 0</option>
+        <option value="1">Nível 1</option>
+        <option value="2">Nível 2</option>
+        <option value="3">Nível 3</option>
+        <option value="4">Nível 4</option>
+        <option value="5">Nível 5</option>
+        <option value="6">Nível 6</option>
+        <option value="7">Nível 7</option>
+        <option value="8">Nível 8</option>
+      </select>
+      <button type="submit">Buscar Disciplinas</button>
+    </form>
+
+    <h2>Disciplinas Disponíveis</h2>
+    <ul id="disciplinas-list" class="drag-list"></ul>
+
+    <h2>Horário</h2>
+    <table id="tabela-horario" border="1">
+      <thead>
+        <tr>
+          <th>Horários</th>
+          <th>Seg</th>
+          <th>Ter</th>
+          <th>Qua</th>
+          <th>Qui</th>
+          <th>Sex</th>
+          <th>Sab</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr data-horario="07:00-08:00">
+          <td>07:00 - 08:00</td>
+          <td class="dropzone"></td>
+          <td class="dropzone"></td>
+          <td class="dropzone"></td>
+          <td class="dropzone"></td>
+          <td class="dropzone"></td>
+          <td class="dropzone"></td>
+        </tr>
+        <tr data-horario="08:00-09:00">
+          <td>08:00 - 09:00</td>
+          <td class="dropzone"></td>
+          <td class="dropzone"></td>
+          <td class="dropzone"></td>
+          <td class="dropzone"></td>
+          <td class="dropzone"></td>
+          <td class="dropzone"></td>
+        </tr>
+        <tr data-horario="09:00-10:00">
+          <td>09:00 - 10:00</td>
+          <td class="dropzone"></td>
+          <td class="dropzone"></td>
+          <td class="dropzone"></td>
+          <td class="dropzone"></td>
+          <td class="dropzone"></td>
+          <td class="dropzone"></td>
+        </tr>
+        <tr data-horario="10:00-11:00">
+          <td>10:00 - 11:00</td>
+          <td class="dropzone"></td>
+          <td class="dropzone"></td>
+          <td class="dropzone"></td>
+          <td class="dropzone"></td>
+          <td class="dropzone"></td>
+          <td class="dropzone"></td>
+        </tr>
+        <tr data-horario="11:00-12:00">
+          <td>11:00 - 12:00</td>
+          <td class="dropzone"></td>
+          <td class="dropzone"></td>
+          <td class="dropzone"></td>
+          <td class="dropzone"></td>
+          <td class="dropzone"></td>
+          <td class="dropzone"></td>
+        </tr>
+        <tr data-horario="12:00-13:00">
+          <td>12:00 - 13:00</td>
+          <td class="dropzone"></td>
+          <td class="dropzone"></td>
+          <td class="dropzone"></td>
+          <td class="dropzone"></td>
+          <td class="dropzone"></td>
+          <td class="dropzone"></td>
+        </tr>
+        <tr data-horario="13:00-14:00">
+          <td>13:00 - 14:00</td>
+          <td class="dropzone"></td>
+          <td class="dropzone"></td>
+          <td class="dropzone"></td>
+          <td class="dropzone"></td>
+          <td class="dropzone"></td>
+          <td class="dropzone"></td>
+        </tr>
+        <tr data-horario="14:00-15:00">
+          <td>14:00 - 15:00</td>
+          <td class="dropzone"></td>
+          <td class="dropzone"></td>
+          <td class="dropzone"></td>
+          <td class="dropzone"></td>
+          <td class="dropzone"></td>
+          <td class="dropzone"></td>
+        </tr>
+        <tr data-horario="15:00-16:00">
+          <td>15:00 - 16:00</td>
+          <td class="dropzone"></td>
+          <td class="dropzone"></td>
+          <td class="dropzone"></td>
+          <td class="dropzone"></td>
+          <td class="dropzone"></td>
+          <td class="dropzone"></td>
+        </tr>
+        <tr data-horario="16:00-17:00">
+          <td>16:00 - 17:00</td>
+          <td class="dropzone"></td>
+          <td class="dropzone"></td>
+          <td class="dropzone"></td>
+          <td class="dropzone"></td>
+          <td class="dropzone"></td>
+          <td class="dropzone"></td>
+        </tr>
+        <tr data-horario="17:00-18:00">
+          <td>17:00 - 18:00</td>
+          <td class="dropzone"></td>
+          <td class="dropzone"></td>
+          <td class="dropzone"></td>
+          <td class="dropzone"></td>
+          <td class="dropzone"></td>
+          <td class="dropzone"></td>
+        </tr>
+        <tr data-horario="18:00-19:00">
+          <td>18:00 - 19:00</td>
+          <td class="dropzone"></td>
+          <td class="dropzone"></td>
+          <td class="dropzone"></td>
+          <td class="dropzone"></td>
+          <td class="dropzone"></td>
+          <td class="dropzone"></td>
+        </tr>
+        <tr data-horario="19:00-19:50">
+          <td>19:00 - 19:50</td>
+          <td class="dropzone"></td>
+          <td class="dropzone"></td>
+          <td class="dropzone"></td>
+          <td class="dropzone"></td>
+          <td class="dropzone"></td>
+          <td class="dropzone"></td>
+        </tr>
+        <tr data-horario="19:50-20:40">
+          <td>19:50 - 20:40</td>
+          <td class="dropzone"></td>
+          <td class="dropzone"></td>
+          <td class="dropzone"></td>
+          <td class="dropzone"></td>
+          <td class="dropzone"></td>
+          <td class="dropzone"></td>
+        </tr>
+        <tr data-horario="20:40-21:30">
+          <td>20:40 - 21:30</td>
+          <td class="dropzone"></td>
+          <td class="dropzone"></td>
+          <td class="dropzone"></td>
+          <td class="dropzone"></td>
+          <td class="dropzone"></td>
+          <td class="dropzone"></td>
+        </tr>
+        <tr data-horario="21:30-22:20">
+          <td>21:30 - 22:20</td>
+          <td class="dropzone"></td>
+          <td class="dropzone"></td>
+          <td class="dropzone"></td>
+          <td class="dropzone"></td>
+          <td class="dropzone"></td>
+          <td class="dropzone"></td>
+        </tr>
+      </tbody>
+    </table>
+    <button id="print-pdf">Imprimir Horário</button>
+
+    <script src="scripts/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
+  </body>
+</html>
