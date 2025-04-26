@@ -1,4 +1,4 @@
-# Planejador de Horários em Prolog
+# Planejador de Horários
 
 ## Visão Geral 🎯
 
