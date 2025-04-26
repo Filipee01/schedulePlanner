@@ -39,7 +39,3 @@ A aplicação utiliza Prolog para a lógica de backend e uma interface amigável
 - **Prolog**: Lógica de backend.
 - **HTML/CSS/JavaScript**: Interface do usuário.
 - **jsPDF**: Exportação de horários para PDF.
-
-## Licença
-
-Este projeto está licenciado sob a [MIT License](LICENSE).
