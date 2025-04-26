@@ -115,7 +115,7 @@ document.getElementById("print-pdf").addEventListener("click", () => {
 
   // Adiciona o título ao PDF
   doc.setFontSize(16);
-  doc.text("Horário", 10, 10);
+  doc.text("Horário", 105, 10, { align: "center" }); // Centraliza o título
 
   // Seleciona a tabela do horário
   const tabela = document.getElementById("tabela-horario");
@@ -127,13 +127,49 @@ document.getElementById("print-pdf").addEventListener("click", () => {
     styles: {
       fontSize: 8, // Reduz o tamanho da fonte para caber no PDF
       cellPadding: 2,
+      halign: "center", // Centraliza o texto nas células
     },
     headStyles: {
       fillColor: [52, 66, 74], // Cor de fundo do cabeçalho
       textColor: [255, 255, 255], // Cor do texto do cabeçalho
+      fontStyle: "bold", // Coloca o texto do cabeçalho em negrito
+      halign: "center", // Centraliza o texto do cabeçalho
+    },
+    bodyStyles: {
+      halign: "center", // Centraliza o texto do corpo
     },
   });
 
   // Salva o PDF
   doc.save("horario.pdf");
 });
+
+// // Função para imprimir o horário criado em PDF
+// document.getElementById("print-pdf").addEventListener("click", () => {
+//   const { jsPDF } = window.jspdf; // Certifique-se de que a biblioteca jsPDF está incluída
+//   const doc = new jsPDF();
+
+//   // Adiciona o título ao PDF
+//   doc.setFontSize(16);
+//   doc.text("Horário", 10, 10);
+
+//   // Seleciona a tabela do horário
+//   const tabela = document.getElementById("tabela-horario");
+
+//   // Converte a tabela para o PDF
+//   doc.autoTable({
+//     html: tabela,
+//     startY: 20, // Define a posição inicial da tabela no PDF
+//     styles: {
+//       fontSize: 8, // Reduz o tamanho da fonte para caber no PDF
+//       cellPadding: 2,
+//     },
+//     headStyles: {
+//       fillColor: [52, 66, 74], // Cor de fundo do cabeçalho
+//       textColor: [255, 255, 255], // Cor do texto do cabeçalho
+//     },
+//   });
+
+//   // Salva o PDF
+//   doc.save("horario.pdf");
+// });
