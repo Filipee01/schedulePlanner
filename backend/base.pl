@@ -1,5 +1,5 @@
-% This file contains the definitions of courses (disciplina) with their codes, names, credit hours, types, and levels.
-% It serves as the main database for the courses available for scheduling.
+% Este arquivo contém as definições dos cursos (disciplinas) com seus códigos, nomes, créditos, tipos e níveis.
+% Ele serve como o principal banco de dados das disciplinas disponíveis
 
 % Nivel 0
 disciplina("1106161", "Bases da Educacao Ambiental", 60, optativa, 0).
