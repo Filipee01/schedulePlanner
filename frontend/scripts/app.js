@@ -110,12 +110,12 @@ function criarNovaLinha(horario) {
 
 // Função para imprimir o horário criado em PDF
 document.getElementById("print-pdf").addEventListener("click", () => {
-  const { jsPDF } = window.jspdf; // Certifique-se de que a biblioteca jsPDF está incluída
+  const { jsPDF } = window.jspdf; 
   const doc = new jsPDF();
 
   // Adiciona o título ao PDF
   doc.setFontSize(16);
-  doc.text("Horário", 105, 10, { align: "center" }); // Centraliza o título
+  doc.text("Horário", 105, 10, { align: "center" }); 
 
   // Seleciona a tabela do horário
   const tabela = document.getElementById("tabela-horario");
@@ -123,20 +123,20 @@ document.getElementById("print-pdf").addEventListener("click", () => {
   // Converte a tabela para o PDF
   doc.autoTable({
     html: tabela,
-    startY: 20, // Define a posição inicial da tabela no PDF
+    startY: 20, 
     styles: {
-      fontSize: 8, // Reduz o tamanho da fonte para caber no PDF
+      fontSize: 8, 
       cellPadding: 2,
-      halign: "center", // Centraliza o texto nas células
+      halign: "center", 
     },
     headStyles: {
-      fillColor: [52, 66, 74], // Cor de fundo do cabeçalho
-      textColor: [255, 255, 255], // Cor do texto do cabeçalho
-      fontStyle: "bold", // Coloca o texto do cabeçalho em negrito
-      halign: "center", // Centraliza o texto do cabeçalho
+      fillColor: [52, 66, 74], 
+      textColor: [255, 255, 255], 
+      fontStyle: "bold", 
+      halign: "center", 
     },
     bodyStyles: {
-      halign: "center", // Centraliza o texto do corpo
+      halign: "center", 
     },
   });
 
